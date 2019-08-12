@@ -15,3 +15,8 @@ document.addEventListener('copy', () => {
 window.addEventListener('wheel', () => {
   console.log('You\'ve been scrolled');
 });
+
+let mapBorder = document.querySelector('.map');
+  mapBorder.addEventListener('mouseenter', event => {
+    event.target.style.border = '5px dotted #C9E5FF';
+  });
