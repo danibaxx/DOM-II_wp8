@@ -41,3 +41,19 @@ textEvent.addEventListener('mouseover', event => {
   }, 1000);
 }, false);
 
+// triggers random color when clicked
+let button = document.querySelector('.btn');
+button.addEventListener('click', event => {
+  event.target.style.backgroundColor = `#${Math.floor(Math.random() * 16777215).toString(16)}`
+});
+
+// triggers when mouseover to transparent image
+let headerImage = document.querySelector('.bus');
+headerImage.addEventListener('mouseover', event => {
+  event.target.style.opacity = '0.5';
+  setTimeout(function() {
+    event.target.style.opacity = '1';
+  }, 1000);
+}, false);
+
+let boatImage = document.querySelector('.img-fluid');
